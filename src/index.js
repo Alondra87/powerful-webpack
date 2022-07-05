@@ -60,10 +60,6 @@ CountCheckbox.addEventListener('keypress', (event) => {
   }
 });
 
-document.addEventListener('change', (event) => {
-  CheckBoxesChecked(event);
-});
-
 const CheckBoxesChecked = (event) => {
   if (event.target.classList.contains('checkbox')) {
     const list = JSON.parse(localStorage.getItem('mytodoList'));
@@ -76,6 +72,10 @@ const CheckBoxesChecked = (event) => {
     localStorage.setItem('mytodoList', JSON.stringify(list));
   }
 };
+
+document.addEventListener('change', (event) => {
+  CheckBoxesChecked(event);
+});
 
 document.addEventListener('click', (event) => {
   if (event.target.classList.contains('fa-trash-alt')) {
