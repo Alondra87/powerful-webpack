@@ -1,6 +1,5 @@
 import './style.css';
 
-
 const showList = document.getElementById('todoList');
 
 const LoadToDoList = () => {
@@ -65,7 +64,6 @@ document.addEventListener('change', (event) => {
   CheckBoxesChecked(event);
 });
 
-
 const CheckBoxesChecked = (event) => {
   if (event.target.classList.contains('checkbox')) {
     const list = JSON.parse(localStorage.getItem('mytodoList'));
@@ -111,5 +109,3 @@ clearAll.addEventListener('click', () => {
   saveList(arrayTask);
   window.location.reload();
 });
-
-
