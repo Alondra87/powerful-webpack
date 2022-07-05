@@ -61,8 +61,6 @@ CountCheckbox.addEventListener('keypress', (event) => {
   }
 });
 
-
-
 document.addEventListener('change', (event) => {
   CheckBoxesChecked(event);
 });
